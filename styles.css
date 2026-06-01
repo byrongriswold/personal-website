@@ -1,0 +1,27 @@
+:root {
+  --background: #f9fafb;
+  --light-grey: #e8eaef;
+  --charcoal: #abaaaa;
+}
+
+body {
+  background-color: var(--background);
+}
+
+.custom-navbar {
+  background-color: var(--light-grey);
+}
+
+.nav-link-btn {
+  background-color: var(--charcoal);
+}
+
+.nav-text-link {
+  text-decoration: none;
+}
+
+.nav-text-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 2px;
+}
