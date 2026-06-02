@@ -25,3 +25,83 @@ body {
   text-underline-offset: 8px;
   text-decoration-thickness: 2px;
 }
+
+main {
+  padding: 1rem 3rem;
+}
+
+@media (min-width: 769px) {
+  main {
+    padding: 2rem 6rem;
+  }
+}
+
+@media (min-width: 993px) {
+  main {
+    padding: 2rem 10rem;
+  }
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+@media (min-width: 993px) {
+  h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+  }
+}
+
+.section-container {
+  margin: 4rem 0;
+}
+
+.larger-text {
+  font-size: 1.5rem;
+}
+
+.grid-container {
+  padding-top: 0.5rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "engineering"
+    "programming"
+    "webdev"
+    "database"
+    "testing";
+}
+
+.engineering {
+  grid-area: engineering;
+}
+
+.programming {
+  grid-area: programming;
+}
+
+.webdev {
+  grid-area: webdev;
+}
+
+.database {
+  grid-area: database;
+}
+
+.testing {
+  grid-area: testing;
+}
+
+@media (min-width: 769px) {
+  .grid-container {
+    gap: 2.5rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "engineering programming"
+      "webdev database"
+      "testing testing";
+  }
+}
