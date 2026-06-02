@@ -62,8 +62,8 @@ h2 {
   font-size: 1.5rem;
 }
 
-.grid-container {
-  padding-top: 0.5rem;
+.skills-grid-container {
+  padding: 1.5rem 0;
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr;
@@ -96,12 +96,66 @@ h2 {
 }
 
 @media (min-width: 769px) {
-  .grid-container {
+  .skills-grid-container {
     gap: 2.5rem;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
       "engineering programming"
       "webdev database"
       "testing testing";
   }
+}
+
+.icons-grid-container {
+  display: grid;
+  row-gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.icons-grid-container > div {
+  grid-column: span 2;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons-grid-container > div:nth-child(9) {
+  grid-column: 2 / span 2;
+}
+
+@media (min-width: 415px) and (max-width: 768px) {
+  .icons-grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .icons-grid-container > div {
+    grid-column: span 1;
+  }
+
+  .icons-grid-container > div:nth-child(9) {
+    grid-column: span 1;
+  }
+}
+
+@media (min-width: 769px) {
+  .icons-grid-container {
+    grid-template-columns: repeat(10, 1fr);
+  }
+
+  .icons-grid-container > div:nth-child(6) {
+    grid-column: 2 / span 2;
+  }
+
+  .icons-grid-container > div:nth-child(9) {
+    grid-column: span 2;
+  }
+}
+
+.icons-grid-container i {
+  font-size: 3rem;
 }
