@@ -21,7 +21,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-md sticky-md-top custom-navbar">
+      <nav class="navbar navbar-expand-md custom-navbar">
         <div class="container-fluid mx-2 my-2 mx-md-4">
           <a class="navbar-brand" href="#">BYRON GRISWOLD</a>
           <button
@@ -149,6 +149,64 @@
             </p>
           </div>
         </div>
+      </section>
+      <section id="projects" class="section-container">
+        <h2>Projects</h2>
+        <section class="card project-card">
+          <h4>SQL-Style Query Language Interpreter</h4>
+          <div class="project-content">
+            <img
+              class="interp-img"
+              src="images/interp-cmd-line.png"
+              alt="Query language interpreter expression input and output"
+            />
+            <p>
+              An interpreter written in Python for a small programming language
+              with a SQL style domain-specific extension. The language includes
+              core features such as let bindings, assignment, conditionals,
+              functions, and sequencing. The SQL-style extension allows programs
+              to query relational table data loaded from .csv files. CSV files
+              are treated as table literals, and query results are written back
+              out as .csv files. Supported operations include SELECT with WHERE,
+              JOIN, UNION ALL, and INTERSECT. The implementation uses a Lark
+              grammar, a parse-tree-to-AST transformer, and an evaluator that
+              executes the AST to produce results.
+            </p>
+          </div>
+          <a
+            class="btn github-btn"
+            href="https://github.com/byrongriswold/sql-csv-interpreter"
+          >
+            <i class="devicon-github-original"></i>
+            Repository</a
+          >
+        </section>
+        <section class="card project-card">
+          <h4>React Instant Messaging App</h4>
+          <div class="project-content">
+            <img
+              class="im-app-img"
+              src="images/direct-im.png"
+              alt="DirectIM chat room"
+            />
+            <p>
+              The frontend for an instant messaging application built with
+              JavaScript, React and Vite. It connects to a backend API and
+              supports authentication, chat room management, real-time
+              messaging, conversation history, and profile management. The
+              application uses RESTful API requests for most client-server
+              communication, Socket.IO for real-time messaging, and Jest with
+              React Testing Library for unit and feature testing.
+            </p>
+          </div>
+          <a
+            class="btn github-btn"
+            href="https://github.com/byrongriswold/cs314-direct-im-frontend"
+          >
+            <i class="devicon-github-original"></i>
+            Repository</a
+          >
+        </section>
       </section>
     </main>
   </body>

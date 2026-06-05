@@ -1,7 +1,9 @@
 :root {
   --background: #f9fafb;
   --light-grey: #e8eaef;
-  --charcoal: #abaaaa;
+  --med-grey: #abaaaa;
+  --charcoal: #313336;
+  --black: #000000;
 }
 
 body {
@@ -13,7 +15,7 @@ body {
 }
 
 .nav-link-btn {
-  background-color: var(--charcoal);
+  background-color: var(--med-grey);
 }
 
 .nav-text-link {
@@ -63,7 +65,7 @@ h2 {
 }
 
 .skills-grid-container {
-  padding: 1.5rem 0;
+  padding-top: 1.5rem;
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr;
@@ -158,4 +160,58 @@ h2 {
 
 .icons-grid-container i {
   font-size: 3rem;
+}
+
+.project-card {
+  margin: 1.5rem 0;
+  padding: 2rem;
+}
+
+.project-content {
+  margin-top: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 415px) and (max-width: 768px) {
+  img {
+    display: block;
+    max-width: 90%;
+    margin: 0 auto 2rem auto;
+  }
+}
+
+@media (min-width: 769px) {
+  img {
+    max-width: 50%;
+    margin-bottom: 0;
+  }
+
+  .im-app-img {
+    float: left;
+    margin-right: 2rem;
+  }
+
+  .interp-img {
+    float: right;
+    margin-left: 2rem;
+  }
+}
+
+.github-btn {
+  display: block;
+  margin: 2rem auto 0 auto;
+  width: 10rem;
+  background-color: var(--charcoal);
+  color: var(--light-grey);
+}
+
+.github-btn:hover {
+  background-color: var(--black);
+  color: var(--background);
 }
