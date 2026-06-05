@@ -4,6 +4,9 @@
   --med-grey: #abaaaa;
   --charcoal: #313336;
   --black: #000000;
+  --send-btn: #2563eb;
+  --send-btn-hover: #1d4ed8;
+  --error-red: #dc2626;
 }
 
 body {
@@ -214,4 +217,98 @@ img {
 .github-btn:hover {
   background-color: var(--black);
   color: var(--background);
+}
+
+footer {
+  padding: 1rem;
+  text-align: center;
+  background-color: var(--light-grey);
+  color: var(--charcoal);
+}
+
+footer p {
+  margin: 0;
+}
+
+.contact-section {
+  margin: 2rem auto 4rem auto;
+}
+
+@media (min-width: 769px) {
+  .contact-section {
+    width: 70%;
+  }
+}
+
+.form-group {
+  margin: 1.25rem 0;
+}
+
+.form-btn {
+  background-color: var(--send-btn);
+  color: var(--background);
+  width: 6rem;
+}
+
+.form-btn:hover {
+  background-color: var(--send-btn-hover);
+  color: var(--background);
+}
+
+.error-message {
+  display: none;
+  color: var(--error-red);
+}
+
+.submit-success {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.submit-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 10rem;
+  height: 80vh;
+}
+
+@media (min-width: 769px) {
+  .submit-success {
+    height: 75vh;
+  }
+}
+
+.success-heading {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.check {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: #16a34a;
+  color: var(--background);
+}
+
+.check i {
+  display: block;
+  font-size: 2.75rem;
+}
+
+.submit-success p {
+  text-align: center;
 }
