@@ -1,34 +1,65 @@
 :root {
-  --background: #f9fafb;
-  --light-grey: #e8eaef;
-  --med-grey: #abaaaa;
-  --charcoal: #313336;
-  --black: #000000;
-  --send-btn: #2563eb;
-  --send-btn-hover: #1d4ed8;
+  --background-color: #fff;
+  --primary-color: #065b93;
+  --hover-color: #d8ecf8;
+  --text-color: #1f2937;
+  --card-background: #f6f9fb;
+  --card-border: #e5e7eb;
+  --secondary-hover-color: #03466f;
   --error-red: #dc2626;
 }
 
+html {
+  background-color: var(--primary-color);
+}
+
 body {
-  background-color: var(--background);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .custom-navbar {
-  background-color: var(--light-grey);
+  background-color: var(--primary-color);
+}
+
+.brand-name {
+  color: var(--background-color);
+}
+
+.brand-name:hover {
+  color: var(--hover-color);
 }
 
 .nav-link-btn {
-  background-color: var(--med-grey);
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  margin-top: 0.6rem;
+}
+
+@media (min-width: 993px) {
+  .nav-link-btn {
+    margin-top: 0;
+    margin-left: 0.6rem;
+  }
+}
+
+.nav-link-btn:hover {
+  background-color: var(--hover-color);
+  color: var(--secondary-hover-color);
+  border-color: var(--primary-color);
 }
 
 .nav-text-link {
   text-decoration: none;
+  color: var(--background-color);
 }
 
 .nav-text-link:hover {
   text-decoration: underline;
   text-underline-offset: 8px;
   text-decoration-thickness: 2px;
+  color: var(--hover-color);
 }
 
 main {
@@ -61,6 +92,7 @@ h2 {
 
 .section-container {
   margin: 4rem 0;
+  background-color: var(--section-background);
 }
 
 .larger-text {
@@ -68,7 +100,7 @@ h2 {
 }
 
 .skills-grid-container {
-  padding-top: 1.5rem;
+  padding-top: 2.5rem;
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr;
@@ -168,6 +200,8 @@ h2 {
 .project-card {
   margin: 1.5rem 0;
   padding: 2rem;
+  background-color: var(--card-background);
+  border-color: var(--card-border);
 }
 
 .project-content {
@@ -210,20 +244,20 @@ img {
   display: block;
   margin: 2rem auto 0 auto;
   width: 10rem;
-  background-color: var(--charcoal);
-  color: var(--light-grey);
+  background-color: var(--primary-color);
+  color: var(--background-color);
 }
 
 .github-btn:hover {
-  background-color: var(--black);
-  color: var(--background);
+  background-color: var(--secondary-hover-color);
+  color: var(--background-color);
 }
 
 footer {
   padding: 1rem;
   text-align: center;
-  background-color: var(--light-grey);
-  color: var(--charcoal);
+  background-color: var(--primary-color);
+  color: var(--background-color);
 }
 
 footer p {
@@ -240,40 +274,41 @@ footer p {
   }
 }
 
+.contact-section h1 {
+  margin-bottom: 1rem;
+}
+
+.form-card {
+  margin: 1.5rem 0;
+  padding: 0.75rem 2rem 2rem 2rem;
+  background-color: var(--card-background);
+  border-color: var(--card-border);
+}
+
 .form-group {
-  margin: 1.25rem 0;
+  margin: 0.75rem 0;
 }
 
 .form-btn {
-  background-color: var(--send-btn);
-  color: var(--background);
+  margin-top: 1rem;
+  background-color: var(--primary-color);
+  color: var(--background-color);
   width: 6rem;
 }
 
 .form-btn:hover {
-  background-color: var(--send-btn-hover);
-  color: var(--background);
+  background-color: var(--secondary-hover-color);
+  color: var(--background-color);
 }
 
 .error-message {
   display: none;
   color: var(--error-red);
+  font-size: 0.9rem;
 }
 
 .submit-success {
   display: none;
-}
-
-.visible {
-  display: block;
-}
-
-.hidden {
-  display: none;
-}
-
-.submit-success {
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
@@ -285,6 +320,14 @@ footer p {
   .submit-success {
     height: 75vh;
   }
+}
+
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
 }
 
 .success-heading {
@@ -300,13 +343,13 @@ footer p {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  background-color: #16a34a;
-  color: var(--background);
+  background-color: var(--primary-color);
+  color: var(--background-color);
 }
 
 .check i {
   display: block;
-  font-size: 2.75rem;
+  font-size: 2.7rem;
 }
 
 .submit-success p {
