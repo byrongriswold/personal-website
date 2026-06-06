@@ -23,6 +23,11 @@ body {
   background-color: var(--primary-color);
 }
 
+.h1 {
+  margin-bottom: 0;
+  font-size: inherit;
+}
+
 .brand-name {
   color: var(--background-color);
 }
@@ -37,7 +42,7 @@ body {
   margin-top: 0.6rem;
 }
 
-@media (min-width: 993px) {
+@media (min-width: 769px) {
   .nav-link-btn {
     margin-top: 0;
     margin-left: 0.6rem;
