@@ -10,7 +10,7 @@ personal-website/
 ├── contact.html
 ├── README.md
 ├── css/
-│   └── style.css
+│   └── styles.css
 ├── js/
 │   └── script.js
 └── images/
